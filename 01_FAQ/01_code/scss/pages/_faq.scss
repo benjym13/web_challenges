@@ -1,0 +1,44 @@
+.topbar__container{
+    width: 100%;
+    .topbar__content{
+        padding-top: $spacing-xl ;
+        @include col-sm(4);
+        @include centered();
+        .logo{
+            width: 60px;
+            object-fit: contain;
+            &.desktop{
+                display: none;
+            }
+        }
+    }
+}
+.main{
+    @include col-sm(4);
+    @include centered();
+    .container{
+    }
+    .img__content{
+        @include flex-centered();
+        .faq__img{
+            @include col-sm(3);
+            @include centered();
+        }
+    }
+    .faq__content{
+        padding-top: $spacing-xxl;
+        
+    }
+}
+.block__question{
+    @include flex-centered(row,flex-start, baseline);
+    cursor: pointer;
+    .fa-plus{
+        font-size: 1rem;
+        color: $pale-grey;
+        padding-right: $spacing-m;
+    }
+    .question {
+        line-height: 1.5rem;
+    }
+}
