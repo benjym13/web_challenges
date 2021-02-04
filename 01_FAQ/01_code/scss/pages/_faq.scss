@@ -1,3 +1,4 @@
+//// TOP BAR NAV /////
 .topbar__container{
     width: 100%;
     .topbar__content{
@@ -7,31 +8,78 @@
         .logo{
             width: 60px;
             object-fit: contain;
+            
             &.desktop{
                 display: none;
             }
         }
+        @include media-query('md') {
+            @include col-md(8);
+            .logo {
+                display:none;
+                &.desktop {
+                    display:block;
+                    width: 120px;
+                }
+            }
+        }
+        @include media-query('xl') {
+            @include col-lg(12);
+        }
     }
 }
+//// FIN TOP BAR NAV /////
+//// MAIN CONTENT /////
 .main{
     @include col-sm(4);
     @include centered();
-    .container{
+    @include media-query('md') {
+        @include col-md(8);
     }
+    @include media-query('xl') {
+        @include col-lg(12);
+        height: calc(100vh - 78.23px) ;
+        @include flex-centered();
+        .container{
+            width: 100%;
+            @include flex-centered(column, flex-start, center);
+            @include media-query('xl') {
+                @include flex-centered(row, space-between, flex-start);
+            }
+        }
+    }
+    
     .img__content{
         @include flex-centered();
         
         .faq__img{
             @include col-sm(3);
             @include centered();
+            @include media-query('md') {
+                @include col-md(4);
+            }
+            @include media-query('xl') {
+                @include col-lg(4);
+            }
         }
     }
     .faq__content{
-        
+        width: 100%;
+        @include media-query('md') {
+            @include col-md(6);
+            @include centered();
+        }
+        @include media-query('xl') {
+            @include col-lg(6);
+        }
         .title{
             padding: $spacing-xxl 0;
             @include Helvetica-Neue-26pt-2();
             text-align: center;
+            @include media-query('xl') {
+                @include Helvetica-Neue-34pt-2();
+                text-align: left;
+            }
         }
     }
 }
@@ -50,6 +98,11 @@
         padding-bottom: $spacing-s;
         padding-left: $spacing-m;
         @include basic-animation(color);
+        @media (hover:hover) {
+            &:hover{
+                color:$blueberry;
+            }
+        }
     }
     &.active {
         .fa-plus {
@@ -57,23 +110,25 @@
             transform: rotate(45deg);
         }
         .question{
-            font-weight: bold;
             color: $blueberry;
         } 
     }
 }
 .block__answer{
     display: none;
-    background-color: $pale-grey;
     max-height: 0;
     overflow: hidden;
     @include basic-animation(max-height);
+    
     &.active {
-        display: block; 
+        display:block;
+        max-height: auto;
+        margin-bottom: $spacing-s;
+        border-top: 1px solid $pale-grey;
+        border-bottom: 1px solid $pale-grey;
     }
     .answer{
         @include Helvetica-Neue-16pt-4();
         padding:  $spacing-xl;
-        
     }
 }

@@ -100,12 +100,63 @@ html {
 .topbar__container .topbar__content .logo.desktop {
   display: none;
 }
+@media only screen and (min-width: 768px) {
+  .topbar__container .topbar__content {
+    width: calc( ((((100vw - 96px) - ((8 - 1) * 16px)) / 8 ) * 8) + ((8 - 1) * 16px) );
+    max-width: calc( ((((1600px - 96px) - ((8 - 1) * 16px)) / 8 ) * 8) + ((8 - 1) * 16px) );
+  }
+  .topbar__container .topbar__content .logo {
+    display: none;
+  }
+  .topbar__container .topbar__content .logo.desktop {
+    display: block;
+    width: 120px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .topbar__container .topbar__content {
+    width: calc( ((((100vw - 134px) - ((12 - 1) * 16px)) / 12 ) * 12) + ((12 - 1) * 16px) );
+    max-width: calc( ((((1600px - 134px) - ((12 - 1) * 16px)) / 12 ) * 12) + ((12 - 1) * 16px) );
+  }
+}
 
 .main {
   width: calc( ((((100vw - 32px) - ((4 - 1) * 16px)) / 4 ) * 4) + ((4 - 1) * 16px) );
   max-width: calc( ((((1600px - 32px) - ((4 - 1) * 16px)) / 4 ) * 4) + ((4 - 1) * 16px) );
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  .main {
+    width: calc( ((((100vw - 96px) - ((8 - 1) * 16px)) / 8 ) * 8) + ((8 - 1) * 16px) );
+    max-width: calc( ((((1600px - 96px) - ((8 - 1) * 16px)) / 8 ) * 8) + ((8 - 1) * 16px) );
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main {
+    width: calc( ((((100vw - 134px) - ((12 - 1) * 16px)) / 12 ) * 12) + ((12 - 1) * 16px) );
+    max-width: calc( ((((1600px - 134px) - ((12 - 1) * 16px)) / 12 ) * 12) + ((12 - 1) * 16px) );
+    height: calc(100vh - 78.23px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1200px) and (min-width: 1200px) {
+  .main .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 .main .img__content {
   display: flex;
@@ -119,6 +170,35 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
+@media only screen and (min-width: 768px) {
+  .main .img__content .faq__img {
+    width: calc( ((((100vw - 96px) - ((8 - 1) * 16px)) / 8 ) * 4) + ((4 - 1) * 16px) );
+    max-width: calc( ((((1600px - 96px) - ((8 - 1) * 16px)) / 8 ) * 4) + ((4 - 1) * 16px) );
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main .img__content .faq__img {
+    width: calc( ((((100vw - 134px) - ((12 - 1) * 16px)) / 12 ) * 4) + ((4 - 1) * 16px) );
+    max-width: calc( ((((1600px - 134px) - ((12 - 1) * 16px)) / 12 ) * 4) + ((4 - 1) * 16px) );
+  }
+}
+.main .faq__content {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .main .faq__content {
+    width: calc( ((((100vw - 96px) - ((8 - 1) * 16px)) / 8 ) * 6) + ((6 - 1) * 16px) );
+    max-width: calc( ((((1600px - 96px) - ((8 - 1) * 16px)) / 8 ) * 6) + ((6 - 1) * 16px) );
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main .faq__content {
+    width: calc( ((((100vw - 134px) - ((12 - 1) * 16px)) / 12 ) * 6) + ((6 - 1) * 16px) );
+    max-width: calc( ((((1600px - 134px) - ((12 - 1) * 16px)) / 12 ) * 6) + ((6 - 1) * 16px) );
+  }
+}
 .main .faq__content .title {
   padding: 1.75rem 0;
   font-family: HelveticaNeue;
@@ -126,6 +206,15 @@ html {
   font-weight: bold;
   color: #354093;
   text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+  .main .faq__content .title {
+    font-family: HelveticaNeue;
+    font-size: 2.125rem;
+    font-weight: bold;
+    color: #354093;
+    text-align: left;
+  }
 }
 
 .block__question {
@@ -152,27 +241,34 @@ html {
   padding-left: 1rem;
   transition: color 0.3s ease-in-out;
 }
+@media (hover: hover) {
+  .block__question .question:hover {
+    color: #354093;
+  }
+}
 .block__question.active .fa-plus {
   color: #354093;
   transform: rotate(45deg);
 }
 .block__question.active .question {
-  font-weight: bold;
   color: #354093;
 }
 
 .block__answer {
   display: none;
-  background-color: #e9ebf7;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 }
 .block__answer.active {
   display: block;
+  max-height: auto;
+  margin-bottom: 0.75rem;
+  border-top: 1px solid #e9ebf7;
+  border-bottom: 1px solid #e9ebf7;
 }
 .block__answer .answer {
-  font-family: HelveticaNeue;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #4d4d4d;
