@@ -1,0 +1,67 @@
+$breakpoints:(
+    'sm' : 576px,
+    'md' : 768px,
+    'lg' : 992px,
+    'xl' : 1200px
+    
+);
+@mixin media-query($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+@mixin centered(){
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex-centered($flex-direction:row, $justify-content:center, $align-items:center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin Helvetica-Neue-34pt-2 {
+    font-family: HelveticaNeue;
+    font-size: 2.125rem;
+    font-weight: bold;
+    color: $blueberry;
+  }
+  
+  @mixin Helvetica-Neue-26pt-2 {
+    font-family: HelveticaNeue;
+    font-size: 1.625rem;
+    font-weight: bold;
+    color: $blueberry;
+  }
+  
+  @mixin Helvetica-Neue-18pt-2 {
+    font-family: HelveticaNeue;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: $black;
+  }
+  
+  @mixin Helvetica-Neue-16pt-3 {
+    font-family: HelveticaNeue;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $black;
+  }
+  
+  @mixin Helvetica-Neue-16pt-4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $greyish-brown;
+  }
+  @mixin basic-animation($property) {
+    transition: $property 0.3s ease-in-out;
+  }
