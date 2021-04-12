@@ -1,0 +1,416 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2em;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+.button {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid #ffffff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+@media only screen and (max-width: 576px) {
+  .button {
+    font-size: 15px;
+  }
+}
+
+.button__corporative {
+  background-color: #cc2031;
+  color: #ffffff;
+}
+
+.form input[type=text] {
+  border: 0;
+  border-bottom: 1px solid #cc2031;
+  width: 300px;
+  padding: 0.5rem;
+}
+.form .form__check {
+  padding: 0.5rem;
+  border: 1px solid #cc2031;
+  background-color: #ffe0e3;
+  margin-bottom: 0.5rem;
+  width: 300px;
+  border-radius: 4px;
+}
+
+.main {
+  animation: opacity 0.7s;
+  animation-timing-function: ease-in-out;
+  position: relative;
+  display: block;
+  height: auto;
+  width: 100vw;
+  opacity: 1;
+  background-image: url(../../02_OPINATOR/img/BG_opi_03.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.main.desactive {
+  opacity: 0;
+  display: none;
+}
+
+.opi-container {
+  max-width: 600px;
+  width: 600px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+@media only screen and (max-width: 576px) {
+  .opi-container {
+    width: 100%;
+  }
+}
+.opi-container .opi-content {
+  min-height: 1200px;
+  position: relative;
+}
+.opi-container .opi-content .chrome-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 2rem;
+}
+.opi-container .opi-content .chrome-logo img {
+  height: 75px;
+  object-fit: cover;
+}
+.opi-container .opi-content .opi-logo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.opi-container .opi-content .opi-logo img {
+  height: 50px;
+}
+
+.hero-container {
+  height: 200px;
+  background-size: contain;
+  background-image: url(../../02_OPINATOR/img/hero.jpg);
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 576px) {
+  .hero-container {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../02_OPINATOR/img/hero_sm.jpg);
+  }
+}
+
+.question-content {
+  padding: 0 2.5rem;
+}
+@media only screen and (max-width: 576px) {
+  .question-content {
+    padding: 0 1.5rem;
+  }
+}
+.question-content .question {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #191919;
+  padding: 2rem 0;
+}
+.question-content .question .content {
+  margin-bottom: 1rem;
+}
+.question-content.one .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.question-content.one .content .content__option {
+  border-bottom: 2px solid transparent;
+  transform: scale(1);
+}
+.question-content.one .content .content__option.active_product {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
+  border-bottom: 2px solid #cc2031;
+  /* outline: 2px solid $chrome-red;
+  outline-offset: -1px;
+  border-radius: 4px; */
+}
+@media only screen and (max-width: 576px) {
+  .question-content.one .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.question-content.two .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.question-content.two .content .scale_item {
+  border: 1px solid #191919;
+  padding: 0.5rem;
+  min-width: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+.question-content.two .content .scale_item.active {
+  background-color: #cc2031;
+  color: #ffffff;
+}
+.question-content.two .content .scale_item:nth-child(n+1) {
+  border-right: 0px;
+}
+.question-content.two .content .scale_item:last-child {
+  border-right: 1px;
+  border-color: #191919;
+  border-style: solid;
+}
+@media (hover: hover) {
+  .question-content.two .content .scale_item:hover {
+    border: 1px solid #ffe0e3;
+    background-color: #ffe0e3;
+    color: #cc2031;
+  }
+}
+.question-content.three .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.question-content.four .content {
+  margin-bottom: 1rem;
+}
+
+.despedida {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.despedida p {
+  color: #cc2031;
+  font-style: italic;
+  padding-bottom: 1.5rem;
+}
+.despedida p .highlight {
+  font-weight: 900;
+}
+.despedida .button__corporative {
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+}
+@media (hover: hover) {
+  .despedida .button__corporative:hover {
+    background-color: #191919;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.content__option {
+  cursor: pointer;
+}
+.content__option img {
+  width: 100px;
+  object-fit: contain;
+}
+.content__option .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a1e3c;
+}
+
+.icon .fas {
+  font-size: 26px;
+  color: #3cbeaa;
+}
+
+.welcome {
+  display: none;
+}
+.welcome.active {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 992px) {
+  .welcome.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.welcome .side {
+  width: 50%;
+  height: 100%;
+}
+@media only screen and (max-width: 992px) {
+  .welcome .side {
+    width: 100%;
+    height: 50%;
+  }
+}
+.welcome .side.left {
+  overflow: hidden;
+}
+.welcome .side.left .side-img {
+  height: 100%;
+  width: 100%;
+  transform: scale(1);
+  object-fit: cover;
+  object-position: center;
+}
+@media (hover: hover) {
+  .welcome .side.left .side-img:hover {
+    transform: scale(1.03);
+    transition: all 0.3s ease-in;
+  }
+}
+.welcome .side.right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a1e3c;
+  color: white;
+  text-align: center;
+}
+
+.side-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.side-content .welcome__title {
+  font-size: 55px;
+  font-weight: 900;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  /* @include media-query('sm') {
+      font-size: 25px;
+  } */
+}
+.side-content .welcome__title.text {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .side-content .welcome__title {
+    font-size: 25px;
+  }
+}
+.side-content .button__basic {
+  border-radius: 28px;
+  background-color: transparent;
+}
+@media (hover: hover) {
+  .side-content .button__basic:hover {
+    background-color: #3cbeaa;
+    border: 1px solid #3cbeaa;
+    transition: all 0.3s ease-in;
+  }
+}
+
+/*# sourceMappingURL=stylo.css.map */

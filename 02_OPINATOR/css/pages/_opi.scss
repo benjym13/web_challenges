@@ -1,0 +1,183 @@
+
+.main {
+    &.desactive {
+        opacity: 0;
+        display: none;
+    }
+    @include opacity-animation();
+    position: relative;
+    display: block;
+    height: auto;
+    width: 100vw;
+    opacity: 1;
+    background-image: url(../../02_OPINATOR/img/BG_opi_03.jpg);
+    background-size: cover;
+    @include flex-centered($align-items:flex-end);
+}
+.opi-container {
+    max-width: 600px;
+    width: 600px;
+    background-color: white;
+    @include centered();
+    height: 100%;
+    @include media-query('sm') {
+        width: 100%;
+    }
+    .opi-content {
+        min-height: 1200px;
+        position: relative;
+        .chrome-logo {
+            position: absolute;
+            top:0;
+            left: 0;
+            padding-left:$spacing-xl;
+            img{
+                height: 75px;
+                object-fit: cover;
+            }
+        }
+        .opi-logo {
+            width: 100%;
+            @include flex-centered();
+            img {
+                height: 50px;
+            }
+        }
+    }
+}
+.hero-container {
+    height:200px;
+    background-size: contain;
+    background-image: url(../../02_OPINATOR/img/hero.jpg);
+    margin-bottom: $spacing-xl;
+    @include media-query('sm') {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(../../02_OPINATOR/img/hero_sm.jpg);
+    }
+}
+.question-content {
+    padding:  0 $spacing-xxl;
+    @include media-query('sm') {
+        padding:  0 $spacing-l;
+    }
+    .question {
+        font-size: $font-m;    
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $black-90;
+        padding: $spacing-xl 0;
+        .content {
+            margin-bottom: $spacing-m;
+        }
+    }
+    &.one {
+        .content {
+            @include flex-centered($justify-content: space-between);
+            margin-bottom: $spacing-m;
+            flex-wrap: wrap;
+            .content__option {
+                border-bottom: 2px solid transparent;
+                transform: scale(1);
+                &.active_product {
+                    transform: scale(1.1);
+                    @include basic-animation();
+                    border-bottom: 2px solid $chrome-red;;
+                    /* outline: 2px solid $chrome-red;
+                    outline-offset: -1px;
+                    border-radius: 4px; */
+                }
+            }
+            @include media-query('sm') {
+                @include flex-centered($justify-content:space-around);
+            }
+        }
+    }
+    &.two {
+        .content {
+            @include flex-centered();
+            margin-bottom: $spacing-m;
+            margin-bottom: $spacing-m;
+            .scale_item {
+                border : 1px solid $black-90;
+                padding: $spacing-xs;
+                min-width: $spacing-xl;
+                text-align: center;
+                cursor: pointer;
+                &.active {
+                    background-color: $chrome-red;
+                    color:$white;
+                }
+                &:nth-child(n+1) {
+                    border-right: 0px;
+                }
+                &:last-child {
+                    border-right: 1px;
+                    border-color: $black-90;
+                    border-style: solid;
+                }
+                @media (hover:hover) {
+                    &:hover {
+                        border: 1px solid $light-chrome-red;
+                        background-color: $light-chrome-red;
+                        color:$chrome-red;
+                    }
+                }
+            }
+        }
+    }
+    &.three {
+        .content {
+            @include flex-centered($justify-content:flex-start);
+            margin-bottom: $spacing-m;
+        }
+    }
+    &.four {
+        .content {
+            margin-bottom: $spacing-m;
+        }
+    }
+}
+.despedida {
+    padding: $spacing-xxl-2 0;
+    @include flex-centered(column);
+    p {
+        color: $chrome-red;
+        font-style: italic;
+        padding-bottom: $spacing-l;
+        .highlight {
+            font-weight: 900;
+        }
+    }
+    .button__corporative {
+        border-radius: 4px;
+        padding: $spacing-s $spacing-l;
+        @media (hover:hover) {
+            &:hover {
+                background-color: $black-90;
+                @include basic-animation();
+            }
+        }
+    }
+}
+.content__option{
+    cursor: pointer;
+    img{
+        width: 100px;
+        object-fit: contain;
+    }
+    .title{
+        font-size:20px;
+        font-weight: 600;
+        color: $blue;
+    } 
+}
+.icon {
+    .fas{
+        font-size: 26px;
+        color:$green;
+    }
+    
+}

@@ -1,0 +1,31 @@
+.button{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid $white;
+    padding: $spacing-xs $spacing-m;
+    cursor: pointer;
+    @include media-query('sm') {
+        font-size: 15px;
+    }
+}
+.button__corporative {
+    background-color: $chrome-red;
+    color:$white;
+}
+.form {
+    input[type=text] {
+        border: 0;
+        border-bottom: 1px solid $chrome-red;
+        width: 300px;
+        padding: $spacing-xs;
+    }
+    .form__check{
+        padding: $spacing-xs;
+        border: 1px solid $chrome-red;
+        background-color: $light-chrome-red;
+        margin-bottom: $spacing-xs;
+        width: 300px;
+        border-radius: 4px;
+    }
+}

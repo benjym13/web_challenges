@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/2c1799a992.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylo.css">
+</head>
+<body>
+
+    <div class="welcome active">
+        <div class="side left"><img class="side-img"src="img/welcome_image01.webp" alt=""></div>
+        <div class="side right">
+            <div class="side-content">
+                <h1 class="welcome__title">Hi!</h1>
+                <p class="welcome__title text">Welcome to my test, my name is Benjamin.</p>
+                <a class="button button__basic">get start</a>
+            </div>
+        </div>
+    </div>
+    <div class="main desactive">
+        <div class="opi-container">
+            <div class="opi-content">
+
+                <div class="chrome-logo">
+                    <img src="img/chrome.png" alt="">
+                </div>
+
+                <div class="opi-logo">
+                    <img src="img/opilogo.png" alt="">
+                </div>
+
+                <div class="hero-container"></div>
+
+                <div class="question-content one">
+                    <p class="question">De todos nuestros modelos, ¿cuál es el que más te gusta?</p>
+                    <div class="content">
+                        <div class="content__option">
+                            <img class="product_item" src="img/productos/producto_1Ajpg" onmouseover="newImg(element)" onmouseout="oldImg(element)" >
+                        </div>
+
+                        <div class="content__option">
+                            <img class="product_item" src="img/productos/producto_2Ajpg" onmouseover="newImg(element)" onmouseout="oldImg(element)">
+                        </div> 
+
+                        <div class="content__option">
+                            <img class="product_item" src="img/productos/producto_3Ajpg" alt=""onmouseover="newImg(element)" onmouseout="oldImg(element)">
+                        </div>
+
+                        <div class="content__option">
+                            <img class="product_item" src="img/productos/producto_4Ajpg" alt="" onmouseover="newImg(element)" onmouseout="oldImg(element)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-content two">
+                    <p class="question">¿Has tenido algún producto de nuestra marca? Si es así, indícanos en una escala cual es tu grado de satisfacción</p>
+                    <div class="content scale">
+                        <div class="scale_item">1</div>
+                        <div class="scale_item">2</div>
+                        <div class="scale_item">3</div>
+                        <div class="scale_item">4</div>
+                        <div class="scale_item">5</div>
+                        <div class="scale_item">6</div>
+                        <div class="scale_item">7</div>
+                        <div class="scale_item">8</div>
+                        <div class="scale_item">9</div>
+                        <div class="scale_item">10</div>
+                    </div>
+                </div>
+
+                <div class="question-content three">
+                    <p class="question">¿qué tienes en cuenta a la hora de elegir una mochila?</p>
+                    <div class="content">
+                        <form  class="form three" action="">
+                            <input class="form__text__type" type="text" placeholder="Escribe aquí tu respuesta">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="question-content four">
+                    <p class="question">¿ usas un laptop? ¿ qué tamaño tiene?.</p>
+                    <div class="content">
+                        <form  class="form three" action="">
+                            <div class="form__check">
+                                <input type="checkbox" >
+                                <label for="vehicle1"> Más de 13"</label><br>
+                            </div>
+                            <div class="form__check">
+                                <input type="checkbox" >
+                                <label for="vehicle1">Más de 15"</label><br>
+                            </div>
+                            <div class="form__check">
+                                <input type="checkbox" >
+                                <label for="vehicle1">Más de 17"</label><br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="despedida">
+                    <p>Gracias por confiar en <span class="highlight">Chrome Industries</span></p>
+                    <a class="button button__corporative">Enviar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/init_test.js"></script>
+    <script src="js/hover.js"></script>
+    <script src ="js/plus.js"></script>
+    <script src ="js/boton.js"></script>
+    <script src ="js/scaleitems.js"></script>
+    <script>
+       
+        var productItem = document.querySelectorAll('.content__option');
+        for ( let i = 0; i  < scaleItem.length; i++) {
+            productItem[i].addEventListener('click', function selectItem() {
+                (document.querySelector('.active_product')) ? document.querySelector('.active_product').classList.remove('active_product') : '';
+                this.classList.add('active_product');
+            });
+        }
+    </script>
+</body>
+</html>
