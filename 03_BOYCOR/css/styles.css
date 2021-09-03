@@ -1,0 +1,182 @@
+
+/****************** LEER ANTES DE EMPEZAR ******************/
+
+/* PRUEBA: Benjamín Martinez */
+/* Color Letra y Fondo Azul: #003064 */
+/* Color Letra Gris: #666 */
+/* Color Placeholder: #aaa */
+/* Color Borde Gris: #e2e2e2 */
+/* Color Fondo Body: #efefef */
+
+/* Ancho columna izquierda contenido: 710px */
+/* Ancho columna derecha contenido: 250px */
+
+/* Altura Cabecera: 100px */
+/* Altura Menu: 50px */
+/* Altura Footer: 50px */
+
+/* Separacion Menu - Contenido: 15px */
+/* Separacion Contenido - Footer: 15px */
+/* Padding Contenido: 15px */
+
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; 
+}
+
+body {
+  line-height: 1; 
+  background-color: #efefef;
+}
+
+#wrapper{
+	width:980px;
+	margin:0 auto;	
+}
+
+*{
+  box-sizing: border-box;
+}
+
+header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.heading-title__candidato {
+  text-transform: uppercase;
+  color:#003064;
+}
+
+.navigation {
+  background-color: #003064;
+  margin: 15px 0;
+}
+.navigation ul {
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.navigation ul li a {
+  color:white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+main {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+
+}
+.block-content {
+  position: relative;
+  width: 710px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+}
+.block-content article {
+  width: 50%;
+  padding: 15px;
+}
+.article-title {
+  text-transform: uppercase;
+  color: #003064;
+  padding-bottom: 15px;
+}
+.article-content {
+  display: none;
+}
+.article-content.active{
+  display: block;
+}
+.block-content article p{
+  margin-bottom: 15px;
+  color:#666;
+}
+.article-img__wrapper {
+  margin-bottom: 15px;
+}
+.plus-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+aside {
+  width: 250px;
+}
+.form-wrapper {
+  width: 100%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.form-title{
+  text-transform: uppercase;
+  color: #003064;
+  margin-bottom: 15px;
+} 
+::placeholder {
+  color:#aaa;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color:#aaa;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color:#aaa;
+}
+button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+input[type="submit"], input[type="text"] {
+  margin-bottom:15px ;
+  width: 100%;
+  border: none;
+  padding: 15px;
+}
+.button-primary {
+width: 100%;
+background-color: #003064;
+color: white;
+text-align: center;
+text-transform: uppercase;
+padding: 10px;
+}
+.navigation-footer {
+  background-color: white;
+  margin: 15px 0;
+}
+.navigation-footer ul {
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navigation-footer ul li a{
+  margin-right: 15px;
+  color: #003064
+}
